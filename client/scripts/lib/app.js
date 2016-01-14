@@ -3,6 +3,7 @@ angular
     'angular-meteor',
     'ionic',
     'angularMoment'
+    'ngCordova'
   ]);
 
 if (Meteor.isCordova) {
