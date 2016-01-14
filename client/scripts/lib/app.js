@@ -2,7 +2,7 @@ angular
   .module('Whatsapp', [
     'angular-meteor',
     'ionic',
-    'angularMoment'
+    'angularMoment',
     'ngCordova'
   ]);
 

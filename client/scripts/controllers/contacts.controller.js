@@ -2,20 +2,13 @@ angular
   .module('Whatsapp')
   .controller('ContactsCtrl', contactsCtrl);
 
-function contactsCtrl ($scope, $reactive, $cordovaContacts, $ionicPlatform, ionicMaterialMotion) {
+function contactsCtrl ($scope, $reactive, $cordovaContacts, $ionicPlatform) {
   $reactive(this).attach($scope);
 
   $ionicPlatform.ready(function() {
     $cordovaContacts.find({fields: ''})
-    .then(function(allContacts) { //omitting parameter to .find() causes all contacts to be returned
-      $scope.contacts = allContacts;
+    .then(function(allContacts) {
+      this.contacts = allContacts;
     });
-  });
-
-  // this.helpers({
-  //   contacts() {
-  //     return $scope.find();
-  //   }
-  // });
-  ////////////
+  }); 
 }
