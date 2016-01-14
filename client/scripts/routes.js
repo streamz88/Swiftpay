@@ -15,6 +15,15 @@ function config($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('tab.contact', {
+      url: '/contacts',
+      views: {
+        'tab-contacts': {
+          templateUrl: 'client/templates/contacts.html',
+          controller: 'ContactsCtrl as contacts'
+        }
+      }
+    })
     .state('tab.chats', {
       url: '/chats',
       views: {

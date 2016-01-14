@@ -1,14 +1,12 @@
 <ion-view view-title="Contacts">
   <ion-content>
-    <ion-list>
-      <ion-item
-        ng-repeat="chat in chats.contacts"
-        class="item-chat item-remove-animate item-avatar item-icon-right"
-        type="item-text-wrap"
-        href="#/tab/chats/{{chat._id}}">
-          {{chat|json}}
-
-      </ion-item>
-    </ion-list>
+    <div class="list">
+        <a href="#/tab/chats/{{chat._id}}" class="item item-avatar"
+            ng-repeat="chat in contacts | limitTo: 50">
+            <img src="{{chat.picture}}" alt="">
+            <h2>{{chat.displayName}}</h2>
+            <p>{{chat.displayName}}</p>
+        </a>
+    </div>
   </ion-content>
 </ion-view>
