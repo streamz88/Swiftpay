@@ -8,7 +8,7 @@ function contactsCtrl ($scope, $reactive, $cordovaContacts, $ionicPlatform) {
   $ionicPlatform.ready(function() {
     $cordovaContacts.find({fields: ''})
     .then(function(allContacts) {
-      this.contacts = allContacts;
+      $scope.contacts = allContacts;
     });
   }); 
 }
