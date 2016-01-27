@@ -8,6 +8,7 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/tab',
       abstract: true,
       templateUrl: 'client/templates/tabs.html',
+      controller: 'TabsCtrl as tabs',
       resolve: {
         user: isAuthorized,
         chats() {

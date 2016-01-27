@@ -8,7 +8,7 @@
 <!--
   The nav bar that will be updated as we navigate between views.
 -->
-<ion-nav-bar class="bar-stable">
+<ion-nav-bar class="bar-positive">
   <ion-nav-back-button>
   </ion-nav-back-button>
 </ion-nav-bar>
@@ -19,4 +19,8 @@
 -->
 <ion-nav-view></ion-nav-view>
 
+<div ng-controller="ChatsCtrl as chats">
+  <button class="button button-energized-900 button-fab button-raised"style="position:absolute;bottom:10px;right:10px;" ng-click="chats.showNewChatModal()"><i class="icon ion-compose light"></i>
+  </button>
+</div>
 </body>
